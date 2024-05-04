@@ -3,7 +3,7 @@
 
 using namespace geode::prelude;
 
-GalleryLayer*  GalleryLayer::create() {
+GalleryLayer* GalleryLayer::create() {
     GalleryLayer* layer = new GalleryLayer();
     if (layer && layer->init()) {
         layer->autorelease();
@@ -21,5 +21,6 @@ bool GalleryLayer::init() {
         spr, this, nullptr
     );
     menu->addChild(btn);
+    this->addChild(menu);
     return true;
 }
