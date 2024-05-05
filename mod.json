@@ -1,9 +1,11 @@
 {
 	"geode": "2.0.0-beta.25",
-	"gd": "2.204",
+	"gd": {
+		"win": "2.204"
+	},
 	"version": "v1.0.0",
-	"id": "eldzeythedev.gallery_mopd",
-	"name": "Gallery mopd",
+	"id": "eldzeythedev.gallery_mod",
+	"name": "Gallery Mod",
 	"developer": "EldzeyTheDev",
 	"description": "",
 	"resources": {
