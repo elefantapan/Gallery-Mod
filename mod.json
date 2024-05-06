@@ -10,5 +10,29 @@
         "sprites": [
             "resources/logo.png"
         ]
+	
+    "settings": {
+        "awesomeness-level": {
+            "name": "Awesomeness level",
+            "description": "How awesome the mod should be",
+            "type": "int",
+            "default": 0
+        },
+        "slider": {
+            "name": "Slider!! Weeeee",
+            "type": "float",
+            "default": 0,
+            "min": -10,
+            "max": 10,
+            "control": {
+                "slider": true
+            }
+        },
+        "awesome-color": {
+            "name": "Awesome color",
+            "type": "color",
+            "default": "#f438a2"
+        }
+    }
     }
 }
