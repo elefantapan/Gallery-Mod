@@ -9,7 +9,7 @@
 	"resources": {
         "sprites": [
             "resources/logo.png"
-        ]
+        ],
 	
     "settings": {
         "awesomeness-level": {
