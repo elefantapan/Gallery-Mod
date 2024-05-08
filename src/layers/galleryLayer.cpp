@@ -14,13 +14,23 @@ GalleryLayer*  GalleryLayer::create() {
 }
 
 bool GalleryLayer::init() {
+    int clicked = 0;
+    void OnMyClick(CCObject* target) {
+        ++clicked;
+        FLAlertLayer::create(
+            "Geode",
+            "You have clicked " + std::to_string(clicked) + " times",
+            "OK"
+        )->show();
+    }
+
     if (!CCLayer::init()) return false;
     auto menu = CCMenu::create();
     menu->setContentSize(CCSize {CCPoint {964, 49}});
     menu->setPosition(CCPoint {79, 298});
     auto spr = CircleButtonSprite::createWithSprite("logo.png"_spr);
     auto btn = CCMenuItemSpriteExtra::create(
-        spr, this, nullptr
+        spr, this, OnMyClick
     );
     menu->addChild(btn);
     return true;
