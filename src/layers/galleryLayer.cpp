@@ -23,7 +23,7 @@ void GalleryLayer::OnMyClick(CCObject* target) {
 }
 
 bool GalleryLayer::init() {
-    clicked = 0; // Initialize the 'clicked' variable
+    int clicked = 0; // Initialize the 'clicked' variable
     if (!CCLayer::init()) return false;
     
     auto menu = CCMenu::create();
