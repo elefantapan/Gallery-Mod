@@ -1,6 +1,9 @@
 {
 	"geode": "2.0.0-beta.25",
-	"gd": "2.205",
+	"gd": {
+	    "win": "2.204",
+	    "android": "2.205"
+	},
 	"version": "v1.0.0",
 	"id": "eldzeythedev.gallery_mod",
 	"name": "Gallery Mod",
@@ -9,15 +12,15 @@
 	"resources": {
         "sprites": [
             "resources/logo.png"
-        ],
-	
+        ]
+	},	
     "settings": {
         "awesomeness-level": {
             "name": "Awesomeness level",
             "description": "How awesome the mod should be",
-            "type": "int",
-            "default": 0
-        },
+			"type": "int",
+			"default": 0
+		},
         "slider": {
             "name": "Slider!! Weeeee",
             "type": "float",
@@ -33,6 +36,5 @@
             "type": "color",
             "default": "#f438a2"
         }
-    }
     }
 }
