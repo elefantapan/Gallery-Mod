@@ -3,7 +3,13 @@
 #include <Geode/ui/BasedButtonSprite.hpp>
 #include "layers/galleryLayer.h"
 
+using namespace cocos2d;
 using namespace geode::prelude;
+
+CCPoint AnchorPointZero = {
+    0,
+    0
+};
 
 class $modify(MyMenuLayer, MenuLayer) {
     void onMyButton(CCObject* sender) {
@@ -18,6 +24,7 @@ class $modify(MyMenuLayer, MenuLayer) {
             return false;
         }
         
+
         // assuming you have a onMyButton function
         //set the button sprite
         auto spr = CircleButtonSprite::createWithSprite("logo.png"_spr);
@@ -26,11 +33,10 @@ class $modify(MyMenuLayer, MenuLayer) {
         auto btn = CCMenuItemSpriteExtra::create(
             spr, this, menu_selector(MyMenuLayer::onMyButton)
         );
-        btn->setID("gallery-mod-button"_spr);
-
         auto menu = this->getChildByID("right-side-menu"); // Define the right side of the menu
         menu->addChild(btn);
-        
+        menu->updateLayout();
+
         return true;
     }
 };
