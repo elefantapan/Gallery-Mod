@@ -1,4 +1,4 @@
-#include <Geode/geode.hpp>
+#include <Geode/Geode.hpp>
 #include "galleryLayer.h"
 
 using namespace geode::prelude;
