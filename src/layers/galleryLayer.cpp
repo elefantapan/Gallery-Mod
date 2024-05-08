@@ -1,4 +1,4 @@
-#include <Geode/geode.hpp>
+#include <Geode/Geode.hpp>
 #include "galleryLayer.h"
 
 using namespace geode::prelude;
@@ -13,16 +13,17 @@ GalleryLayer*  GalleryLayer::create() {
     return nullptr;
 }
 
+int clicked = 0;
+void OnMyClick(CCObject* target) {
+    ++clicked;
+    FLAlertLayer::create(
+        "Geode",
+        "You have clicked " + std::to_string(clicked) + " times",
+        "OK"
+    )->show();
+}
+
 bool GalleryLayer::init() {
-    int clicked = 0;
-    void OnMyClick(CCObject* target) {
-        ++clicked;
-        FLAlertLayer::create(
-            "Geode",
-            "You have clicked " + std::to_string(clicked) + " times",
-            "OK"
-        )->show();
-    }
 
     if (!CCLayer::init()) return false;
     auto menu = CCMenu::create();
