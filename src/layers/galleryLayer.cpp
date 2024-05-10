@@ -14,12 +14,9 @@ GalleryLayer* GalleryLayer::create() {
 }
 
 void GalleryLayer::OnMyClick(CCObject* target) {
-    ++clicked;
-    FLAlertLayer::create(
-        "Geode",
-        "You have clicked " + std::to_string(clicked) + " times",
-        "OK"
-    )->show();
+    CCScene* scene = CCScene::create();
+    scene->addChild(genRandomLayer());
+    CCDirector::sharedDirector()->replaceScene(scene);
 }
 
 void GalleryLayer::OnMyClick(CCObject* target) {
