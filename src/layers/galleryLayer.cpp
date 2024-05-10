@@ -15,7 +15,7 @@ GalleryLayer* GalleryLayer::create() {
 
 void GalleryLayer::OnMyClick(CCObject* target) {
     CCScene* scene = CCScene::create();
-    scene->addChild(genRandomLayer());
+    scene->addChild(Menulayer::create());
     CCDirector::sharedDirector()->replaceScene(scene);
 }
 
