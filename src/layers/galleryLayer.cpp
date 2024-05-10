@@ -13,7 +13,7 @@ GalleryLayer* GalleryLayer::create() {
     return nullptr;
 }
 
-void GalleryLayer::OnMyClick(CCObject* target) {
+void GalleryLayer::OnMyClick2(CCObject* target) {
     CCScene* scene = CCScene::create();
     scene->addChild(Menulayer::create());
     CCDirector::sharedDirector()->replaceScene(scene);
