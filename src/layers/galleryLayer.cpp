@@ -14,9 +14,7 @@ GalleryLayer* GalleryLayer::create() {
 }
 
 void GalleryLayer::OnMyClick(CCObject* target) {
-    CCScene* scene = CCScene::create();
-    scene->addChild(MenuLayer::create());
-    CCDirector::sharedDirector()->replaceScene(scene);
+    GameManager::sharedManager()->safePopScene();
 }
 
 bool GalleryLayer::init() {
