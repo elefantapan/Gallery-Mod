@@ -14,7 +14,7 @@ GalleryLayer* GalleryLayer::create() {
 }
 
 void GalleryLayer::OnMyClick(CCObject* target) {
-    GameManager::sharedManager()->safePopScene();
+    GameManager::sharedState()->safePopScene();
 }
 
 bool GalleryLayer::init() {
