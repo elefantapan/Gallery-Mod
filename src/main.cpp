@@ -27,7 +27,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 
         // assuming you have a onMyButton function
         //set the button sprite
-        auto spr = CircleButtonSprite::createWithSprite("logo.png"_spr);
+        auto spr = CCSprite::create("logo.png"_spr);
         
         //create the menu button and set the position and anchor
         auto btn = CCMenuItemSpriteExtra::create(
