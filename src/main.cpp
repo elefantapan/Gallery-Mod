@@ -16,7 +16,7 @@ class $modify(MyMenuLayer, MenuLayer) {
         auto scene = CCScene::create();
         auto layer = GalleryLayer::create();
         scene->addChild(layer);
-        CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(0.05f, scene));
+        CCDirector::sharedDirector()->pushScene(scene);
     }
     // Signature is `bool MenuLayer::init()`
     bool init() {
