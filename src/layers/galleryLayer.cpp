@@ -32,7 +32,6 @@ bool GalleryLayer::init() {
     auto backBtn = CCMenuItemSpriteExtra::create(
         spr, this, menu_selector(GalleryLayer::OnMyClick)
     );
-    menu->addChild(btn);
     menu->addChild(backBtn);
     
     addChild(menu); // Add the menu to the layer
