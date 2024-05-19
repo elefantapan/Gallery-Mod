@@ -13,7 +13,7 @@ GalleryLayer* GalleryLayer::create() {
     return nullptr;
 }
 
-void GalleryLayer::OnMyClick2(CCObject* target) {
+void GalleryLayer::OnMyClick(CCObject* target) {
     CCScene* scene = CCScene::create();
     scene->addChild(MenuLayer::create());
     CCDirector::sharedDirector()->replaceScene(scene);
@@ -28,11 +28,9 @@ bool GalleryLayer::init() {
     menu->setPosition(CCPoint(79, 298)); // Corrected syntax for setting position
     
     auto spr = CircleButtonSprite::createWithSprite("logo.png"_spr);
-    auto btn = CCMenuItemSpriteExtra::create(
-        spr, this, menu_selector(GalleryLayer::OnMyClick)
-    );
+    
     auto backBtn = CCMenuItemSpriteExtra::create(
-        spr, this, menu_selector(GalleryLayer::OnMyClick2)
+        spr, this, menu_selector(GalleryLayer::OnMyClick)
     );
     menu->addChild(btn);
     menu->addChild(backBtn);
