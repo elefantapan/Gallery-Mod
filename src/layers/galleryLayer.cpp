@@ -15,33 +15,8 @@ GalleryLayer* GalleryLayer::create() {
 
 void GalleryLayer::OnMyClick2(CCObject* target) {
     CCScene* scene = CCScene::create();
-    scene->addChild(Menulayer::create());
+    scene->addChild(MenuLayer::create());
     CCDirector::sharedDirector()->replaceScene(scene);
-}
-
-void GalleryLayer::OnMyClick(CCObject* target) {
-    auto director = CCDirector::sharedDirector();
-    auto winSize = director->getWinSize();
-
-    auto scene = director->getRunningScene();
-    GJGarageLayer* garage;
-    #ifdef GEODE_IS_ANDROID64 //lol
-    auto scene2 = GJGarageLayer::scene();
-    garage = getChildOfType<GJGarageLayer>(scene2, 0);
-    #else
-    garage = GJGarageLayer::node();
-    #endif
-
-    scene->addChild(garage, -1);
-
-    auto moveTo = CCMoveTo::create(0.3f, ccp(0, winSize.height));
-    auto easeIn = CCEaseIn::create(moveTo, 2.0f);
-    auto callFunc = CCCallFunc::create(this, callfunc_selector(SogLayer::onExit));
-    auto callFunc2 = CCCallFunc::create(this, callfunc_selector(SogLayer::removeFromParent));
-
-    auto ccSeq = CCSequence::create(easeIn, callFunc, callFunc2, 0);
-    this->runAction(ccSeq);
-    GameManager::sharedState()->fadeInMenuMusic();
 }
 
 bool GalleryLayer::init() {
