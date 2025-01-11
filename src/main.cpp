@@ -3,8 +3,6 @@
 #include <Geode/ui/BasedButtonSprite.hpp>
 #include "layers/galleryLayer.h"
 
-// UPDATE WORKFLOW!!
-
 using namespace cocos2d;
 using namespace geode::prelude;
 
